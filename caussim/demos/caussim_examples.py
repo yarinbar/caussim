@@ -11,7 +11,7 @@ import seaborn as sns
 from caussim.config import COLOR_MAPPING, DIR2PAPER_IMG, LABEL_MAPPING
 from caussim.data.loading import load_dataset
 from caussim.experiences.base_config import (
-    CATE_CONFIG_LOGISTIC_NUISANCE,
+    CATE_CONFIG_LOGISTIC_NUISANCES,
     DEFAULT_SIMU_CONFIG,
 )
 from caussim.pdistances.mmd import mmd_rbf, normalized_total_variation
@@ -27,7 +27,7 @@ for random_seed, overlap, legend in config_for_papers:
     sns.set(font_scale=1.7, style="whitegrid", context="talk")
     # Test for one simulation
     simu_config = deepcopy(DEFAULT_SIMU_CONFIG)
-    cate_config = deepcopy(CATE_CONFIG_LOGISTIC_NUISANCE)
+    cate_config = deepcopy(CATE_CONFIG_LOGISTIC_NUISANCES)
 
     # overlap = 0.7
     # random_seed = 8
